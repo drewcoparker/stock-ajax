@@ -1,0 +1,37 @@
+body {
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.yahoo-form {
+    margin-top: 20px;
+
+}
+
+#pages {
+    width: 200vw;
+}
+
+#page-1, #page-2 {
+    width: 100vw;
+    float: left;
+    height: 100vh;
+    position: relative;
+    transition: all 1s;
+}
+
+#arrow1, #arrow2 {
+    position: absolute;
+    top: 50%;
+    background-color: #cacaca;
+    color: #fff;
+    font-size: 20px;
+}
+
+#arrow1 {
+    right: 0px;
+}
+
+#arrow2 {
+    left: 0px;
+}
