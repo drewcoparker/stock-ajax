@@ -5,7 +5,11 @@ body {
 
 .yahoo-form {
     margin-top: 20px;
+    margin-bottom: 15px;
+}
 
+#symbol {
+    /*padding-right: 15px;*/
 }
 
 #pages {
@@ -34,4 +38,8 @@ body {
 
 #arrow2 {
     left: 0px;
+}
+
+.my-stock {
+    /*margin-right: 10px;*/
 }

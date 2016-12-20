@@ -21,34 +21,25 @@ $(function() {
 
 
 
-    var submitted = false;
-    var paintStocks;
-    var symbol = $('#symbol').val();
-    // Click events
-
     $('.yahoo-form').submit(function() {
         // Stop the form from submitting (the default action)
         event.preventDefault();
         symbol = $('#symbol').val();
-        console.log(typeof(symbol));
         // Take this out of the submit event and put it in a button witin the rows
         localStorage.setItem("userStocks", symbol);
         var userStocksSaved = localStorage.getItem('userStocks').split(',');
-        console.log(typeof(userStocksSaved));
+        // console.log(typeof(userStocksSaved));
         // submitted = true;
         getStockRequest(symbol);
+        // setInterval(getStockRequest(symbol), 1000);
     });
 
 
 
 
-    // $('#a').click(function() {
-    //     var userStocksSaved = localStorage.getItem('userStocks').split(',');
-    //     for (let i = 0; i < stockInfo.length; i++) {
-    //         var htmlToPlot = buildStockRow(userStocksSaved[i]);
-    //         $('#stock-body').html(htmlToPlot);
-    //     }
-    // });
+    $('.my-stock').click(function() {
+        console.log("it works");
+    }); 
 
 
 
@@ -62,6 +53,7 @@ $(function() {
                 var classChange = "danger";
             }
             newHTML += '<tr>';
+                newHTML += '<td><button type="button" class="btn btn-success my-stock">Save stock</button></td>';
                 newHTML += '<td>'+stock[i].Symbol+'</td>';
                 newHTML += '<td>'+stock[i].Name+'</td>';
                 newHTML += '<td>'+stock[i].Ask+'</td>';
